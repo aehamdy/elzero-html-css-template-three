@@ -145,9 +145,19 @@ ul {
 .section-landing__text {
   flex: 1;
 }
+@media (max-width: 991px) {
+  .section-landing__text {
+    text-align: center;
+  }
+}
 .section-landing__heading {
   font-size: 4rem;
   letter-spacing: -0.2rem;
+}
+@media (max-width: 767px) {
+  .section-landing__heading {
+    font-size: 2.8rem;
+  }
 }
 .section-landing__description {
   font-size: 2.4rem;
@@ -156,9 +166,25 @@ ul {
   color: #666;
   max-width: 50rem;
 }
+@media (max-width: 767px) {
+  .section-landing__description {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 991px) {
+  .section-landing__description {
+    margin: 1rem auto;
+  }
+}
 .section-landing__image > img {
   width: 60rem;
-  max-width: 100%;
+  position: relative;
+  animation: up-and-down 5s linear infinite;
+}
+@media (max-width: 991px) {
+  .section-landing__image > img {
+    display: none;
+  }
 }
 .section-landing__arrow {
   color: #2196f3;
@@ -170,4 +196,24 @@ ul {
 }
 .section-landing__arrow:hover {
   color: #1787e0;
+}
+.section-landing__arrow > i {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes up-and-down {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -5rem;
+  }
+}
+@keyframes bounce {
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-1.5rem);
+  }
 }/*# sourceMappingURL=style.css.map */
