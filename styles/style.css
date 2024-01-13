@@ -194,6 +194,142 @@ ul {
   margin-right: 1rem;
 }
 
+.main-title {
+  margin: 20rem auto;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+  border: 0.2rem solid #000;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.main-title::before, .main-title::after {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #2196f3;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::before {
+  left: -3rem;
+}
+.main-title::after {
+  right: -3rem;
+}
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-circle 0.5s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-circle 0.5s linear forwards;
+}
+.main-title:hover {
+  color: #fff;
+  border-color: #fff;
+  transition-delay: 0.5s;
+}
+
+@keyframes left-circle {
+  50% {
+    left: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-circle {
+  50% {
+    right: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+.main-title {
+  margin: 20rem auto;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+  border: 0.2rem solid #000;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.main-title::before, .main-title::after {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #2196f3;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::before {
+  left: -3rem;
+}
+.main-title::after {
+  right: -3rem;
+}
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-circle 0.5s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-circle 0.5s linear forwards;
+}
+.main-title:hover {
+  color: #fff;
+  border-color: #fff;
+  transition-delay: 0.5s;
+}
+
+@keyframes left-circle {
+  50% {
+    left: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-circle {
+  50% {
+    right: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
 .section-landing {
   position: relative;
 }
