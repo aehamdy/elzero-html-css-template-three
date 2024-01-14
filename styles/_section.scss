@@ -148,6 +148,56 @@
       color: $primary-color;
     }
   }
+
+  &-gallery {
+    @include section-padding;
+    position: relative;
+    background-color: $section-background;
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+      gap: 4rem;
+    }
+
+    &__box {
+      padding: 1.5rem;
+      background-color: $white-color;
+      box-shadow: 0 1.2rem 2rem 0 rgb(0 0 0 / 13%),
+        0 0.2rem 0.4rem 0 rgb(0 0 0 / 12%);
+    }
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255 255 255 / 20%);
+        width: 0;
+        height: 0;
+        opacity: 0;
+        z-index: 2;
+      }
+
+      &:hover::before {
+        animation: flashing 0.7s;
+      }
+
+      > img {
+        max-width: 100%;
+        transition: $transition-timing;
+
+        &:hover {
+          transform: rotate(5deg) scale(1.1);
+        }
+      }
+    }
+  }
 }
 
 @keyframes up-and-down {
@@ -178,5 +228,17 @@
 @keyframes moving-arrow {
   100% {
     transform: translateX(1rem);
+  }
+}
+
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
   }
 }
