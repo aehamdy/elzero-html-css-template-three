@@ -95,9 +95,7 @@
     position: relative;
 
     &__container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-      gap: 4rem;
+      @include d-grid(25rem);
     }
 
     &__article {
@@ -155,9 +153,7 @@
     background-color: $section-background;
 
     &__container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-      gap: 4rem;
+      @include d-grid;
     }
 
     &__box {
@@ -205,9 +201,7 @@
     background-color: $white-color;
 
     &__container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-      gap: 4rem;
+      @include d-grid;
     }
 
     &__box {
@@ -335,6 +329,52 @@
       padding: 1rem 3rem;
       border-radius: 0.6rem;
       transition: $transition-timing;
+    }
+  }
+
+  &-testimonials {
+    @include section-padding;
+    background-color: $section-background;
+
+    &__container {
+      @include d-grid;
+    }
+
+    &__testimonial {
+      padding: 2rem;
+      background-color: $white-color;
+      box-shadow: 0 0.2rem 0.4rem rgb(0 0 0 / 7%);
+      border-radius: 0.6rem;
+      position: relative;
+    }
+
+    &__image {
+      position: absolute;
+      border-radius: 50%;
+      border: 1rem solid $section-background;
+      width: 10rem;
+      right: -1rem;
+      top: -5rem;
+    }
+
+    &__heading {
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      color: $grey-color;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    &__icon {
+      color: #ffc107;
+    }
+
+    &__description {
+      line-height: 1.5;
+      color: $grey-color;
+      margin-top: 1rem;
     }
   }
 }

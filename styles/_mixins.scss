@@ -1,3 +1,9 @@
+@mixin d-grid($gtc: 30rem, $gap: 4rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($gtc, 1fr));
+  gap: $gap;
+}
+
 @mixin section-padding($sec-pad: $sec-pad) {
   padding-top: $sec-pad;
   padding-bottom: $sec-pad;
