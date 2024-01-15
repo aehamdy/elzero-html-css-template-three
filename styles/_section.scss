@@ -377,6 +377,37 @@
       margin-top: 1rem;
     }
   }
+
+  &-team {
+    @include section-padding;
+
+    &__container {
+      @include d-grid($gap: 3rem);
+    }
+
+    &__team-member {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: #f3f3f3;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: calc(100% - 6rem);
+        border-radius: 1rem;
+        z-index: -2;
+      }
+    }
+
+    &__data {
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
 }
 
 @keyframes up-and-down {
