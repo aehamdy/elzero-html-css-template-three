@@ -982,6 +982,70 @@
       }
     }
   }
+
+  &-videos {
+    @include section-padding;
+
+    &__holder {
+      display: flex;
+      justify-content: center;
+      background-color: $section-background;
+      border: 0.1rem solid #ddd;
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+      }
+    }
+
+    &__list-holder {
+      min-width: 30rem;
+      background-color: $white-color;
+    }
+
+    &__name {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    &__item {
+      padding: 1.5rem;
+      border-top: 0.1 solid $section-background;
+      cursor: pointer;
+      transition: $transition-timing;
+
+      &:hover {
+        background-color: #fafafa;
+        color: $primary-color;
+      }
+
+      > span {
+        display: block;
+        margin-top: 1rem;
+        color: $grey-color;
+      }
+    }
+
+    &__preview {
+      background-color: #e2e2e2;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+
+    &__info {
+      padding: 2rem;
+      background-color: $white-color;
+      margin-top: 1rem;
+    }
+  }
 }
 
 @keyframes up-and-down {
