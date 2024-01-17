@@ -1077,6 +1077,128 @@ ul {
     border-radius: 0;
   }
 }
+.section-plans {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  position: relative;
+  background-color: #ececec;
+}
+.section-plans__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 3rem;
+}
+.section-plans__plan {
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 1.2rem 2rem 0 rgba(0, 0, 0, 0.13), 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.12);
+  transition: 0.3s;
+  z-index: 1;
+}
+.section-plans__plan::before, .section-plans__plan::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 0;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: 0.3s;
+}
+.section-plans__plan::before {
+  top: 0;
+  left: 0;
+}
+.section-plans__plan::after {
+  bottom: 0;
+  right: 0;
+}
+.section-plans__plan:hover::before, .section-plans__plan:hover::after {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .section-plans__plan--popular {
+    top: -2rem;
+  }
+}
+.section-plans__label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  color: #fff;
+  background-color: #2196f3;
+  font-weight: bold;
+  padding: 1rem 0.2rem 3.5rem 1rem;
+  font-size: 1.8rem;
+  right: 2rem;
+  width: 4rem;
+}
+.section-plans__label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  border-width: 2rem;
+  transition: 0.3s;
+}
+.section-plans:hover .section-plans__label::before {
+  border-color: transparent transparent #f6f6f6 transparent;
+}
+.section-plans__title {
+  font-weight: bold;
+  margin: 3rem 0;
+  font-size: 2.5rem;
+  letter-spacing: -0.1rem;
+}
+.section-plans__image {
+  width: 8rem;
+  margin-bottom: 3rem;
+}
+.section-plans__price {
+  margin-bottom: 2rem;
+}
+.section-plans__amount {
+  display: block;
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2196f3;
+}
+.section-plans__time {
+  color: #777;
+}
+.section-plans__list {
+  text-align: left;
+}
+.section-plans__item {
+  padding: 2rem;
+  border-top: 0.1rem solid #eee;
+}
+.section-plans__item::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  margin-right: 1rem;
+  color: #2196f3;
+}
+.section-plans__button {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0.2rem solid #2196f3;
+  color: #2196f3;
+  margin: 3rem auto 4rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.section-plans__button:hover {
+  background-color: #1787e0;
+  color: #fff;
+  border-color: #1787e0;
+}
 
 @keyframes up-and-down {
   0%, 100% {
