@@ -567,6 +567,59 @@
       color: $primary-color;
     }
   }
+
+  &-our-skills {
+    @include section-padding;
+    position: relative;
+
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+
+    &__image {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    &__skills {
+      flex: 1;
+    }
+
+    &__skill {
+      margin-bottom: 1.5rem;
+    }
+
+    &__heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      > span {
+        font-size: 1.2rem;
+        border: 0.1rem solid #ccc;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.4rem;
+        color: $primary-color;
+      }
+    }
+
+    &__progress {
+      height: 3rem;
+      background-color: #eee;
+      position: relative;
+
+      > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $primary-color;
+      }
+    }
+  }
 }
 
 @keyframes up-and-down {

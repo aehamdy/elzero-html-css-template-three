@@ -825,6 +825,51 @@ ul {
 .section-services__link {
   color: #2196f3;
 }
+.section-our-skills {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  position: relative;
+}
+.section-our-skills__container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .section-our-skills__image {
+    display: none;
+  }
+}
+.section-our-skills__skills {
+  flex: 1;
+}
+.section-our-skills__skill {
+  margin-bottom: 1.5rem;
+}
+.section-our-skills__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.section-our-skills__heading > span {
+  font-size: 1.2rem;
+  border: 0.1rem solid #ccc;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.4rem;
+  color: #2196f3;
+}
+.section-our-skills__progress {
+  height: 3rem;
+  background-color: #eee;
+  position: relative;
+}
+.section-our-skills__progress > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #2196f3;
+}
 
 @keyframes up-and-down {
   0%, 100% {
