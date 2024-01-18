@@ -1128,6 +1128,111 @@
       font-weight: bold;
     }
   }
+
+  &-discount {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__image-container {
+      background-image: url(../assets/discount-background1.jpg);
+      background-size: cover;
+      color: $white-color;
+      flex-basis: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      animation: change-bg 8s linear infinite;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(23 135 224 / 97%);
+        z-index: -1;
+      }
+
+      @media (max-width: 991px) {
+        padding: 3rem 0;
+        flex-basis: 100%;
+      }
+    }
+
+    &__content {
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    &__heading {
+      font-size: 4rem;
+      letter-spacing: -0.2rem;
+    }
+
+    &__description {
+      line-height: 1.6;
+      font-size: 1.8rem;
+      max-width: 50rem;
+    }
+
+    &__image {
+      width: 30rem;
+      max-width: 100%;
+    }
+
+    &__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 50%;
+
+      @media (max-width: 991px) {
+        padding: 3rem 0;
+        flex-basis: 100%;
+      }
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      border: 0;
+      border-bottom: 0.1rem solid #ccc;
+      background-color: #f9f9f9;
+      caret-color: $primary-color;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__textarea {
+      resize: none;
+      height: 20rem;
+    }
+
+    &__submit {
+      display: block;
+      width: 100%;
+      padding: 1.5rem;
+      background-color: $primary-color;
+      color: $white-color;
+      font-size: 2rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: $transition-timing;
+
+      &:hover {
+        background-color: $alt-primary-color;
+      }
+    }
+  }
 }
 
 @keyframes up-and-down {
@@ -1170,5 +1275,15 @@
     opacity: 0;
     width: 200%;
     height: 200%;
+  }
+}
+
+@keyframes change-bg {
+  0%,
+  100% {
+    background-image: url(../assets/discount-background1.jpg);
+  }
+  50% {
+    background-image: url(../assets/discount-background2.jpg);
   }
 }

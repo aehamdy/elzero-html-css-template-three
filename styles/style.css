@@ -1327,6 +1327,100 @@ ul {
   font-style: italic;
   font-weight: bold;
 }
+.section-discount {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-discount__image-container {
+  background-image: url(../assets/discount-background1.jpg);
+  background-size: cover;
+  color: #fff;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: change-bg 8s linear infinite;
+}
+.section-discount__image-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 135, 224, 0.97);
+  z-index: -1;
+}
+@media (max-width: 991px) {
+  .section-discount__image-container {
+    padding: 3rem 0;
+    flex-basis: 100%;
+  }
+}
+.section-discount__content {
+  text-align: center;
+  padding: 0 2rem;
+}
+.section-discount__heading {
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+}
+.section-discount__description {
+  line-height: 1.6;
+  font-size: 1.8rem;
+  max-width: 50rem;
+}
+.section-discount__image {
+  width: 30rem;
+  max-width: 100%;
+}
+.section-discount__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+}
+@media (max-width: 991px) {
+  .section-discount__form {
+    padding: 3rem 0;
+    flex-basis: 100%;
+  }
+}
+.section-discount__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 0;
+  border-bottom: 0.1rem solid #ccc;
+  background-color: #f9f9f9;
+  caret-color: #2196f3;
+}
+.section-discount__input:focus {
+  outline: none;
+}
+.section-discount__textarea {
+  resize: none;
+  height: 20rem;
+}
+.section-discount__submit {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.section-discount__submit:hover {
+  background-color: #1787e0;
+}
 
 @keyframes up-and-down {
   0%, 100% {
@@ -1357,5 +1451,13 @@ ul {
     opacity: 0;
     width: 200%;
     height: 200%;
+  }
+}
+@keyframes change-bg {
+  0%, 100% {
+    background-image: url(../assets/discount-background1.jpg);
+  }
+  50% {
+    background-image: url(../assets/discount-background2.jpg);
   }
 }/*# sourceMappingURL=style.css.map */
